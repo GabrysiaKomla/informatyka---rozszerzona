@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+long long liczba, dzielnik = 2, n, suma2 = 1;
+
+int main()
+{
+    cin >> n;
+    for(long long i = 0; i < n; i++){
+        cin >> liczba;
+        suma2 = 1;
+        dzielnik = 2;
+        if(liczba == 1){
+            cout << "DEFICYTOWA" <<endl;
+            continue;
+        }
+        if(liczba == 2){
+            cout << "DEFICYTOWA" <<endl;
+            continue;
+        }
+
+    while(dzielnik * dzielnik <= liczba){
+        if(liczba % dzielnik == 0){
+            long long j = liczba / dzielnik;
+            suma2 += dzielnik;
+            if(dzielnik != j){
+                suma2 += j;
+            }
+        }
+        dzielnik++;
+    }
+        if(suma2 == liczba){
+        cout << "DOSKONALA" <<endl;
+        }
+        if(suma2 < liczba){
+        cout << "DEFICYTOWA" <<endl;
+        }
+        if(suma2 > liczba){
+        cout << "NADMIAROWA" <<endl;
+
+        }
+
+    }
+    return 0;
+}
