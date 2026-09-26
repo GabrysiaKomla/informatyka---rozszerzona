@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int n , k = 0;
+int main()
+{
+    cin >> n;
+    k = 0;
+    if(n > 99){
+        cout << 0;
+        return 0;
+    }
+    for(int i = 99; i > 10; i--){
+        if(((i/10)*(i%10))%2 == 1){
+            k++;
+            cout << i <<endl;
+            if(k == n){
+                return 0;
+            }
+        }
+    }
+    for(int i = -11; i > -99; i--){
+        if(((i/10)*(i%10))%2 == 1){
+            k++;
+            cout << i <<endl;
+            if(k == n){
+                return 0;
+            }
+        }
+    }
+ 
+    return 0;
+ 
+}
