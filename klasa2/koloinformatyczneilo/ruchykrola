@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int Xs,Xm,Ys,Ym,ruchk,ruchw;
+int main()
+{
+    cin >> Xs >> Ys;
+    cin >> Xm >> Ym;
+    
+    ruchk = max(Xs - Xm, Xm - Xs);
+    ruchw = max(Ys - Ym, Ym - Ys);
+    cout << max(ruchk,ruchw);
+    
+}
